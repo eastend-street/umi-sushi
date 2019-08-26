@@ -1,1 +1,1 @@
-# HTML practice
+# Midterm project
