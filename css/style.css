@@ -1,62 +1,85 @@
-/* all */
+/* 
+===========================
+all 
+===========================
+*/
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-/* container */
+
+/* 
+===========================
+container
+===========================
+*/
 .container {
-    width: 100%;
+  width: 100%;
 }
 
-
-/* first */
+/* 
+===========================
+first 
+===========================
+*/
 .first {
-    background: url(../images/bg.jpg) center center no-repeat fixed;
-    background-size: cover;
-    width: 100%;
-    height: 1200px;
+  background: url(../images/bg.jpg) center center no-repeat fixed;
+  background-size: cover;
+  width: 100%;
+  height: 1200px;
 }
 
 .nav {
-    width: 500px;
-    position: fixed;
-    top: 50px;
-    right: 10px;
+  width: 500px;
+  position: fixed;
+  top: 50px;
+  right: 10px;
 }
 
 li {
-    display: inline-block;
-    width: 100px;
+  display: inline-block;
+  width: 100px;
 }
 
-li, a {
-    text-decoration: none;
-    list-style: none;
+li,
+a {
+  text-decoration: none;
+  list-style: none;
 }
 
 a {
-    padding: 10px;
-    color: #fff;
+  padding: 10px;
+  color: #fff;
 }
 
-/*  second */
+/*  
+===========================
+second 
+===========================
+*/
 .second {
-    background-color: #808080;
-    width: 100%;
-    height: 1200px;
+  background-color: #808080;
+  width: 100%;
+  height: 1200px;
 }
 
-
-/* third */
+/* 
+===========================
+third
+===========================
+*/
 .third {
-    background-color: #000;
-    width: 100%;
-    height: 1200px;
+  background-color: #000;
+  width: 100%;
+  height: 1200px;
 }
 
-
-/* forth */
+/* 
+===========================
+forth 
+===========================
+*/
 .fourth {
-    background-color: #808080;
-    width: 100%;
-    height: 1200px;
+  background-color: #808080;
+  width: 100%;
+  height: 1200px;
 }
