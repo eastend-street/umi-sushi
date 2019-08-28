@@ -165,7 +165,7 @@ about
   padding-top: 4em;
   display: grid;
   grid-template-columns: 50vw 50vw;
-  grid-template-rows: 3.5em;
+  /* grid-template-rows: 3.5em; */
   grid-template-areas: "picture text";
 }
 
@@ -181,9 +181,19 @@ about
 
 .about .text {
   grid-area: text;
-  padding: 4.2em;
+  padding: 4em;
   font-size: 1.5em;
   line-height: 1.5em;
+}
+
+@media (max-width: 992px) {
+  .about .text {
+    font-size: 1em;
+    padding: 2em;  
+  }
+}
+
+@media (max-width: 576px) {
 }
 
 /* 
