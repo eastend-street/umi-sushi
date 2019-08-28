@@ -18,10 +18,10 @@ container
 }
 
 .container .nav-title {
-  font-size: 30px;
+  font-size: 1.8em;
   text-align: center;
-  padding-top: 50px;
-  letter-spacing: 4px;
+  padding-top: 2em;
+  letter-spacing: 0.25em;
 }
 
 /* 
@@ -30,29 +30,34 @@ header
 ===========================
 */
 .header {
-  width: 100%;
-  height: 50px;
   background-color: #000;
   color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 40vw minmax(10vw, auto) 40vw;
+  grid-template-rows: 3.5em;
+  grid-template-areas:
+    "logo . nav"
 }
 
 .header .logo {
-  font-size: 22px;
-  width: 100px;
-  height: 50px;
+  grid-area: logo;
+  font-size: 1.2em;
+  display: flex;
+  padding-left: 2em;
+  /* justify-content: center; */
+  align-items: center;
+}
+.nav {
+  grid-area: nav;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.nav {
-  /* margin-right: 0; */
-}
 li {
   display: inline-block;
-  width: 100px;
 }
 
 li,
@@ -62,7 +67,7 @@ a {
 }
 
 a {
-  padding: 10px;
+  padding: 0.7em;
   color: #fff;
 }
 
@@ -74,19 +79,47 @@ home
 .home {
   background: url(../images/sushi-bg.jpg) center center no-repeat fixed;
   background-size: cover;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 3.5em);
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.home::before{
+	background-color: rgba(0,0,0,0.3);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: ' ';
+}
+
+.home .inner-home{
+  position: absolute;
+  width: 100%;
+  text-align: center;
 }
 
 .home .title {
-  font-size: 40px;
-  letter-spacing: 8px;
+  font-size: 3.5em;
+  letter-spacing: 0.2em;
 }
 
 .home .subtitle {
+  font-size: 1.9em;
+  margin-top: 1em;
+}
+@media (max-width: 576px) {
+  .home .title {
+    font-size: 3em;
+    letter-spacing: 0.1em;
+  }
+  .home .subtitle {
+    font-size: 1.3em;
+  }
 }
 
 /*  
@@ -190,5 +223,5 @@ footer
 }
 .footer .copyright{
   text-align: center;
-  padding-top: 100px;
+  padding-top: 5em;
 }
