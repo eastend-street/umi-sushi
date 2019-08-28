@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Umi Sushi</title>
     <link rel="stylesheet" href="./css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="./css/hamburger.css" type="text/css" />
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
   </head>
   <body>
@@ -21,14 +22,32 @@
             <li><a href="#location">Location</a></li>
           </ul>
         </div>
+        <div id="nav-drawer">
+          <input id="nav-input" type="checkbox" class="nav-unshown" />
+          <label id="nav-open" for="nav-input"><span></span></label>
+          <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+          <div id="nav-content">
+            <ul>
+              <li>
+                <a href="#home">
+                  Home
+                </a>
+              </li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#events">Events</a></li>
+              <li><a href="#location">Location</a></li>
+            </ul>
+          </div>
+        </div>
       </header>
       <div id="home" class="home">
         <div class="inner-home">
-        <div>
-          <h1 class="title">Umi Sushi</h1>
-          <p class="subtitle">Japanese traditional restaurant in Vancouver</p>
+          <div>
+            <h1 class="title">Umi Sushi</h1>
+            <p class="subtitle">Japanese traditional restaurant in Vancouver</p>
+          </div>
         </div>
-      </div>
       </div>
       <div id="menu" class="menu">
         <h2 class="nav-title">Menu</h2>
