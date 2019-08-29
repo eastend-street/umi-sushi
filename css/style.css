@@ -15,6 +15,7 @@ container
 */
 .container {
   width: 100%;
+  background-color: rgb(85, 57, 57);
 }
 
 .container .nav-title {
@@ -264,10 +265,78 @@ events
 location 
 ===========================
 */
-.location {
-  background-color: #fff;
-  width: 100%;
-  height: 100vh;
+.location{
+  background-color: rgb(153, 148, 148);
+  margin: 20px;
+}
+.inner {
+  display: grid;
+  /* height: 90vh; */
+  /* grid-template-columns: repeat(auto-fill,minmax(500px,1fr)); */
+  grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  grid-auto-rows: 44em;
+}
+.area ul{
+  text-align: center;
+  padding-top: 2em;
+}
+.area ul li{
+  box-sizing: border-box;
+  margin: 5px; 
+  background-color: rgba(211, 211, 211, 0.938);
+  /* color: rgb(77, 68, 68); */
+  color: black;
+  font-style: italic;
+  padding: 20px;
+  width: 95%;
+  opacity: 0.9;
+}
+.area .name{
+  text-align: center;
+  letter-spacing: 9px;
+}
+.area .name  p{
+  padding-left: 0px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.area ul li p{
+  text-align: left;
+  padding-left: 80px;
+  font-style: normal;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(128, 119, 119);
+}
+.map{
+  text-align: center;
+  position: relative;
+  top: 60px;
+}
+.area-2 img{
+  border: 10px solid darkslategray;
+
+}
+.area-2 .access p{
+  text-align: left;
+}
+.area-2 ul li{
+  position: relative;
+  top: 80px;
+}
+.area-2 ul{
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .inner {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+  .area ul li{
+    width: 85%;
+  }
+  .area ul li p{
+    padding: 0;
+  }
 }
 
 /* 
