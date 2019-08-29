@@ -8,6 +8,7 @@
   <title>Umi Sushi</title>
   <link rel="stylesheet" href="./css/reset.css" type="text/css" />
   <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  <link rel="stylesheet" href="./css/hamburger.css" type="text/css" />
 </head>
 
 <body>
@@ -23,6 +24,19 @@
           <li><a href="#location">Location</a></li>
         </ul>
       </div>
+      <div id="nav-drawer">
+        <input id="nav-input" type="checkbox" class="nav-unshown" />
+        <label id="nav-open" for="nav-input"><span></span></label>
+        <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+        <div id="nav-content">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#location">Location</a></li>
+          </ul>
+    </div>
     </header>
     <div id="home" class="home">
       <div class="inner-home">
@@ -35,48 +49,51 @@
     <div id="menu" class="menu">
       <h2 class="nav-title">Menu</h2>
     </div>
-
-
     <div id="about" class="about">
       <h2 class="nav-title">About</h2>
+      <div class="inner-about">
+        <div class="picture">
+          <img src="./images/about-sushi.jpg" alt="about" />
+          <p>
+            Umi Sushi is a quick service restaurant committed to offering
+            fresh and healthy Japanese cuisine for those in a hurry and on the
+            go.<br />
+            Through continuous improvement and evolution, Umi Sushi aims to
+            offer delicious and creative cuisine that is fresh, healthy, made
+            with care, and integrity of ingredients.<br />
+            We operate over 5 locations across Canada and all of them aims to
+            give the better services for the clients.
+          </p>
+        </div>
+      </div>
     </div>
-
-
     <div id="events" class="events">
       <h2 class="nav-title">Events</h2>
       <div class="container_events">
-
         <!-- Frist Event -->
         <div class="cardEvents">
           <div class="cardPicture">
             <img src="images/preparation (1).jpg" alt="Preparation of sushi">
           </div>
           <div class="cardText">
-
             <h3>
               Preparation Workshop
             </h3>
-
             <p>
               In this unique event, we are going to learn how to choose the freshest ingredients.
               We also going to teach how is the bestway to cut the fish, at seasoning to use on each ingredient.
             </p>
-
           </div>
-
         </div>
-
         <!-- Second Event -->
         <div class="cardEvents">
           <div class="cardPicture">
             <img src="images/Plating.jpg" alt="Plating of sushi">
           </div>
           <div class="cardText">
-
             <h3>
               Plating Workshop
             </h3>
-
             <p>
               On this event we are going to learn together how to plate your dish.
               - what plate to use
@@ -84,35 +101,25 @@
               and more incredible tips on design the plate to not only provide food but create a entire experience about
               Japanese food and culture.
             </p>
-
           </div>
-
         </div>
-
         <!-- Third Event -->
         <div class="cardEvents">
           <div class="cardPicture">
             <img src="images/Serving.jpg" alt="Serving the sushi">
           </div>
           <div class="cardText">
-
             <h3>
               Serving Workshop
             </h3>
-
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum voluptatibus temporibus dicta similique
               debitis rem odit modi iure, facilis minus praesentium repellendus sit labore nulla at accusantium aperiam
               placeat eaque!
             </p>
-
           </div>
-
         </div>
       </div>
     </div>
-
-
-
     <div id="location" class="location">
       <h2 class="nav-title">Location</h2>
     </div>
@@ -123,5 +130,4 @@
     </div>
   </div>
 </body>
-
 </html>
