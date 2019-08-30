@@ -36,9 +36,9 @@ header
   top: 0;
   z-index: 1;
   display: grid;
-  grid-template-columns: 40vw minmax(10vw, auto) 40vw;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 3.5em;
-  grid-template-areas: "logo . nav";
+  grid-template-areas: "logo  nav";
 }
 
 .header .logo {
@@ -48,11 +48,15 @@ header
   padding-left: 2em;
   align-items: center;
 }
+.logo img {
+  width: 2em;
+  margin-right: 1em;
+}
 
 .nav {
   grid-area: nav;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -77,6 +81,9 @@ a {
 }
 
 @media (max-width: 992px) {
+  .header {
+    grid-template-columns: 80% 20%;
+  }
   .nav {
     display: none;
   }
@@ -172,26 +179,39 @@ about
   grid-template-areas: "picture text";
 }
 
-.about .picture {
+.about .picture-area {
   grid-area: picture;
   text-align: center;
   padding: 3em;
 }
 
-.about .picture img {
+.about .picture-area img {
   width: 90%;
 }
 
-.about .text {
+.about .text-area {
   grid-area: text;
   padding: 2em;
+}
+.about .text-area .logo{
+  margin-bottom: 2em;
+  display: flex;
+  align-items: center;
+}
+.about .text-area .logo img{
+  width: 5em;
+  margin-right: 1em;
+}
+.about .text-area .logo .title{
+  font-size: 2em;
+}
+.about .text-area p{
   font-size: 1.4em;
   line-height: 1.2em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 @media (max-width: 768px) {
   .about .inner-about {
     padding: 1em;
@@ -203,6 +223,9 @@ about
   .about .text {
     font-size: 1em;
     padding: 2em;
+  }
+  .about .text-area .logo{
+    justify-content: center;
   }
 }
 
