@@ -36,9 +36,9 @@ header
   top: 0;
   z-index: 1;
   display: grid;
-  grid-template-columns: 40vw minmax(10vw, auto) 40vw;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 3.5em;
-  grid-template-areas: "logo . nav";
+  grid-template-areas: "logo  nav";
 }
 
 .header .logo {
@@ -48,11 +48,15 @@ header
   padding-left: 2em;
   align-items: center;
 }
+.logo img {
+  width: 2em;
+  margin-right: 1em;
+}
 
 .nav {
   grid-area: nav;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -77,6 +81,9 @@ a {
 }
 
 @media (max-width: 992px) {
+  .header {
+    grid-template-columns: 80% 20%;
+  }
   .nav {
     display: none;
   }
@@ -151,7 +158,54 @@ menu
   background-color: #000;
   color: #fff;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.menu .inner-menu {
+  padding: 2em 2em 4em 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "sanma aji"
+    "nishin shrimp";
+}
+.inner-menu .each-menu {
+  padding: 3em 5em;
+}
+.sanma {
+  grid-area: sanma;
+}
+
+.aji {
+  grid-area: aji;
+}
+.nishin {
+  grid-area: nishin;
+}
+.shrimp {
+  grid-area: shrimp;
+}
+.inner-menu .each-menu p {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+.inner-menu .each-menu img {
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .inner-menu .each-menu {
+    padding: 2em 3em;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu .inner-menu {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "sanma" "aji"
+      "nishin" "shrimp";
+  }
 }
 
 /* 
@@ -162,42 +216,65 @@ about
 .about {
   background-color: #fff;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .about .inner-about {
-  padding-top: 4em;
+  padding: 2em 2em 4em 2em;
   display: grid;
-  grid-template-columns: 50vw 50vw;
-  /* grid-template-rows: 3.5em; */
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: "picture text";
 }
 
-.about .picture {
+.about .picture-area {
   grid-area: picture;
   text-align: center;
   padding: 3em;
 }
 
-.about .picture img {
-  width: 45vw;
+.about .picture-area img {
+  width: 90%;
 }
 
-.about .text {
+.about .text-area {
   grid-area: text;
-  padding: 4em;
-  font-size: 1.5em;
-  line-height: 1.5em;
+  padding: 2em;
 }
-
-@media (max-width: 992px) {
+.about .text-area .logo {
+  margin-bottom: 2em;
+  display: flex;
+  align-items: center;
+}
+.about .text-area .logo img {
+  width: 5em;
+  margin-right: 1em;
+}
+.about .text-area .logo .title {
+  font-size: 2em;
+}
+.about .text-area p {
+  font-size: 1.4em;
+  line-height: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .about .inner-about {
+    padding: 1em;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "picture"
+      "text";
+  }
   .about .text {
     font-size: 1em;
     padding: 2em;
   }
+  .about .text-area .logo {
+    justify-content: center;
+  }
 }
-
-@media (max-width: 576px) {}
 
 /* 
 ===========================
@@ -207,56 +284,60 @@ events
 .events {
   background-color: #000;
   color: #fff;
-  width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-.container_events {
-
-  height: 100%;
+.container-events {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100%;
   align-items: baseline;
   justify-content: center;
-  grid-gap: 4%;
-  margin-left: 4%;
-  margin-right: 4%;
-  line-height: 2;
+  padding: 2em 2em 4em 2em;
+}
+.card-text h3 {
+  margin: 2em 0;
+}
+.card-text p {
+  line-height: 1.7;
 }
 
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-  .container_events {
-
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100%;
-    align-items: baseline;
-    justify-content: center;
-    grid-gap: 4%;
-    margin-left: 4%;
-    margin-right: 4%;
-    line-height: 2;
-  }
-
-  .events {
-    overflow: scroll;
-  }
-}
-
-#events>h2 {
-  padding-bottom: 2em;
-}
-
-.cardEvents {
-  /* border: 5px solid white; */
+.card-events {
   grid-column: 1fr;
   text-align: center;
+  padding: 3em 1em;
 }
 
 .cardPicture img {
   width: 100%;
+}
+@media (max-width: 992px) {
+  .container-events {
+    padding: 0em 2em 4em 2em;
+  }
+  .cardPicture img {
+    width: 70%;
+  }
+  .card-text h3 {
+    margin: 1em 0;
+  }
+  .card-text p {
+    line-height: 1.2;
+  }
+}
+@media (max-width: 768px) {
+  .events h2 {
+    padding-bottom: 1em;
+  }
+  .container-events {
+    grid-template-columns: 1fr;
+    padding: 0em 2em 0em 2em;
+  }
+  .card-events {
+    padding: 3em 0;
+  }
+  .cardPicture img {
+    width: 60%;
+  }
 }
 
 .cardText p {
@@ -270,10 +351,89 @@ location
 */
 .location {
   background-color: #fff;
-  width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+}
+.inner-location {
+  padding: 4em 2em 4em 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "map info";
 }
 
+.map-area {
+  grid-area: map;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-area img {
+  width: 90%;
+}
+
+.info-area {
+  padding-left: 2em;
+  grid-area: info;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "hours access"
+    "holiday seats"
+    "address .";
+}
+
+.hours {
+  grid-area: hours;
+}
+.access {
+  grid-area: access;
+}
+.holiday {
+  grid-area: holiday;
+}
+.seats {
+  grid-area: seats;
+}
+.address {
+  grid-area: address;
+}
+.info {
+  padding: 1em;
+}
+.info h3 {
+  padding: 0.5em 0;
+}
+.info p {
+  color: #807777;
+}
+
+@media (max-width: 992px) {
+  .location .inner-location {
+    padding: 1em;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "map"
+      "info";
+  }
+  .map-area {
+    margin: 2em auto;
+  }
+  .info-area {
+    margin: 2em auto;
+    padding-left: 0;
+  }
+}
+@media (max-width: 576px) {
+  .info-area {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hours "
+      "access"
+      "holiday"
+      "seats"
+      "address";
+  }
+}
 /* 
 ===========================
 footer 
