@@ -233,6 +233,7 @@ about
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "picture text";
+  align-items: center;
 }
 
 .about .picture-area {
