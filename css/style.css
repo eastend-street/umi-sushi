@@ -259,6 +259,10 @@ events
   width: 100%;
 }
 
+.cardText p {
+  text-align: justify;
+}
+
 /* 
 ===========================
 location 
