@@ -85,6 +85,7 @@ a {
   .header {
     grid-template-columns: 80% 20%;
   }
+
   .nav {
     display: none;
   }
@@ -170,9 +171,11 @@ menu
     "sanma aji"
     "nishin shrimp";
 }
+
 .inner-menu .each-menu {
   padding: 3em 5em;
 }
+
 .sanma {
   grid-area: sanma;
 }
@@ -180,20 +183,25 @@ menu
 .aji {
   grid-area: aji;
 }
+
 .nishin {
   grid-area: nishin;
 }
+
 .shrimp {
   grid-area: shrimp;
 }
+
 .inner-menu .each-menu p {
   text-align: center;
   font-size: 1.5em;
   margin-bottom: 1em;
 }
+
 .inner-menu .each-menu img {
   width: 100%;
 }
+
 @media (max-width: 992px) {
   .inner-menu .each-menu {
     padding: 2em 3em;
@@ -204,8 +212,8 @@ menu
   .menu .inner-menu {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "sanma" "aji"
-      "nishin" "shrimp";
+      "sanma""aji"
+      "nishin""shrimp";
   }
 }
 
@@ -225,6 +233,7 @@ about
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "picture text";
+  align-items: center;
 }
 
 .about .picture-area {
@@ -241,18 +250,22 @@ about
   grid-area: text;
   padding: 2em;
 }
+
 .about .text-area .logo {
   margin-bottom: 2em;
   display: flex;
   align-items: center;
 }
+
 .about .text-area .logo img {
   width: 5em;
   margin-right: 1em;
 }
+
 .about .text-area .logo .title {
   font-size: 2em;
 }
+
 .about .text-area p {
   font-size: 1.4em;
   line-height: 1.2em;
@@ -260,6 +273,7 @@ about
   justify-content: center;
   align-items: center;
 }
+
 @media (max-width: 768px) {
   .about .inner-about {
     padding: 1em;
@@ -268,10 +282,12 @@ about
       "picture"
       "text";
   }
+
   .about .text {
     font-size: 1em;
     padding: 2em;
   }
+
   .about .text-area .logo {
     justify-content: center;
   }
@@ -295,9 +311,11 @@ events
   justify-content: center;
   padding: 2em 2em 4em 2em;
 }
+
 .card-text h3 {
   margin: 2em 0;
 }
+
 .card-text p {
   line-height: 1.7;
 }
@@ -311,34 +329,46 @@ events
 .cardPicture img {
   width: 100%;
 }
+
 @media (max-width: 992px) {
   .container-events {
     padding: 0em 2em 4em 2em;
   }
+
   .cardPicture img {
     width: 70%;
   }
+
   .card-text h3 {
     margin: 1em 0;
   }
+
   .card-text p {
     line-height: 1.2;
   }
 }
+
 @media (max-width: 768px) {
   .events h2 {
     padding-bottom: 1em;
   }
+
   .container-events {
     grid-template-columns: 1fr;
     padding: 0em 2em 0em 2em;
   }
+
   .card-events {
     padding: 3em 0;
   }
+
   .cardPicture img {
     width: 60%;
   }
+}
+
+.cardText p {
+  text-align: justify;
 }
 
 /* 
@@ -350,6 +380,7 @@ location
   background-color: #fff;
   min-height: 100vh;
 }
+
 .inner-location {
   padding: 4em 2em 4em 2em;
   display: grid;
@@ -392,24 +423,31 @@ location
 .hours {
   grid-area: hours;
 }
+
 .access {
   grid-area: access;
 }
+
 .holiday {
   grid-area: holiday;
 }
+
 .seats {
   grid-area: seats;
 }
+
 .address {
   grid-area: address;
 }
+
 .info {
   padding: 1em;
 }
+
 .info h3 {
   padding: 0.5em 0;
 }
+
 .info p {
   color: #807777;
 }
@@ -422,14 +460,17 @@ location
       "map"
       "info";
   }
+
   .map-area {
     margin: 2em;
   }
+
   .info-area {
     margin: 2em auto;
     padding-left: 0;
   }
 }
+
 @media (max-width: 576px) {
   .info-area {
     grid-template-columns: 1fr;
@@ -441,6 +482,7 @@ location
       "address";
   }
 }
+
 /* 
 ===========================
 footer 
