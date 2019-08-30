@@ -161,6 +161,53 @@ menu
   min-height: 100vh;
 }
 
+.menu .inner-menu {
+  padding: 2em 2em 4em 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "sanma aji"
+    "nishin shrimp";
+}
+.inner-menu .each-menu {
+  padding: 3em 5em;
+}
+.sanma {
+  grid-area: sanma;
+}
+
+.aji {
+  grid-area: aji;
+}
+.nishin {
+  grid-area: nishin;
+}
+.shrimp {
+  grid-area: shrimp;
+}
+.inner-menu .each-menu p {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+.inner-menu .each-menu img {
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .inner-menu .each-menu {
+    padding: 2em 3em;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu .inner-menu {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "sanma" "aji"
+      "nishin" "shrimp";
+  }
+}
+
 /* 
 ===========================
 about
@@ -193,19 +240,19 @@ about
   grid-area: text;
   padding: 2em;
 }
-.about .text-area .logo{
+.about .text-area .logo {
   margin-bottom: 2em;
   display: flex;
   align-items: center;
 }
-.about .text-area .logo img{
+.about .text-area .logo img {
   width: 5em;
   margin-right: 1em;
 }
-.about .text-area .logo .title{
+.about .text-area .logo .title {
   font-size: 2em;
 }
-.about .text-area p{
+.about .text-area p {
   font-size: 1.4em;
   line-height: 1.2em;
   display: flex;
@@ -224,7 +271,7 @@ about
     font-size: 1em;
     padding: 2em;
   }
-  .about .text-area .logo{
+  .about .text-area .logo {
     justify-content: center;
   }
 }
