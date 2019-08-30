@@ -48,6 +48,7 @@ header
   padding-left: 2em;
   align-items: center;
 }
+
 .logo img {
   width: 2em;
   margin-right: 1em;
@@ -362,9 +363,19 @@ location
   justify-content: center;
   align-items: center;
 }
-
-.map-area img {
+.google-map {
   width: 90%;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+.google-map iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .info-area {
@@ -412,7 +423,7 @@ location
       "info";
   }
   .map-area {
-    margin: 2em auto;
+    margin: 2em;
   }
   .info-area {
     margin: 2em auto;
