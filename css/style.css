@@ -32,21 +32,31 @@ header
 .header {
   background-color: #000;
   color: #fff;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 50% 50%;
   grid-template-columns: 50% 50%;
+  -ms-grid-rows: 3.5em;
   grid-template-rows: 3.5em;
-  grid-template-areas: "logo  nav";
+      grid-template-areas: "logo  nav";
 }
 
 .header .logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: logo;
   font-size: 1.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-left: 2em;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logo img {
@@ -55,13 +65,23 @@ header
 }
 
 .nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: nav;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #nav-drawer {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: nav;
   display: none;
 }
@@ -83,6 +103,7 @@ a {
 
 @media (max-width: 992px) {
   .header {
+    -ms-grid-columns: 80% 20%;
     grid-template-columns: 80% 20%;
   }
 
@@ -91,9 +112,15 @@ a {
   }
 
   #nav-drawer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-right: 10px;
   }
 }
@@ -108,9 +135,15 @@ home
   background-size: cover;
   height: calc(100vh - 3.5em);
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -165,9 +198,11 @@ menu
 
 .menu .inner-menu {
   padding: 2em 2em 4em 2em;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas:
+      grid-template-areas:
     "sanma aji"
     "nishin shrimp";
 }
@@ -177,18 +212,26 @@ menu
 }
 
 .sanma {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: sanma;
 }
 
 .aji {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: aji;
 }
 
 .nishin {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: nishin;
 }
 
 .shrimp {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: shrimp;
 }
 
@@ -210,10 +253,27 @@ menu
 
 @media (max-width: 576px) {
   .menu .inner-menu {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    grid-template-areas:
+        grid-template-areas:
       "sanma""aji"
       "nishin""shrimp";
+  }
+  .sanma {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .aji {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .nishin {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .shrimp {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
   }
 }
 
@@ -230,13 +290,19 @@ about
 
 .about .inner-about {
   padding: 2em 2em 4em 2em;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "picture text";
-  align-items: center;
+      grid-template-areas: "picture text";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about .picture-area {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: picture;
   text-align: center;
   padding: 3em;
@@ -247,14 +313,20 @@ about
 }
 
 .about .text-area {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: text;
   padding: 2em;
 }
 
 .about .text-area .logo {
   margin-bottom: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about .text-area .logo img {
@@ -269,16 +341,23 @@ about
 .about .text-area p {
   font-size: 1.4em;
   line-height: 1.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 768px) {
   .about .inner-about {
     padding: 1em;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    grid-template-areas:
+        grid-template-areas:
       "picture"
       "text";
   }
@@ -289,7 +368,17 @@ about
   }
 
   .about .text-area .logo {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .about .picture-area {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .about .text-area {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
   }
 }
 
@@ -305,10 +394,16 @@ events
 }
 
 .container-events {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  align-items: baseline;
-  justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 2em 2em 4em 2em;
 }
 
@@ -321,6 +416,7 @@ events
 }
 
 .card-events {
+  -ms-grid-column: 1;
   grid-column: 1fr;
   text-align: center;
   padding: 3em 1em;
@@ -354,6 +450,7 @@ events
   }
 
   .container-events {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     padding: 0em 2em 0em 2em;
   }
@@ -383,16 +480,26 @@ location
 
 .inner-location {
   padding: 4em 2em 4em 2em;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "map info";
+      grid-template-areas: "map info";
 }
 
 .map-area {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: map;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .google-map {
   width: 90%;
@@ -410,33 +517,47 @@ location
 }
 
 .info-area {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   padding-left: 2em;
   grid-area: info;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas:
+      grid-template-areas:
     "hours access"
     "holiday seats"
     "address .";
 }
 
 .hours {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: hours;
 }
 
 .access {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: access;
 }
 
 .holiday {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: holiday;
 }
 
 .seats {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: seats;
 }
 
 .address {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: address;
 }
 
@@ -455,8 +576,9 @@ location
 @media (max-width: 992px) {
   .location .inner-location {
     padding: 1em;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    grid-template-areas:
+        grid-template-areas:
       "map"
       "info";
   }
@@ -469,17 +591,46 @@ location
     margin: 2em auto;
     padding-left: 0;
   }
+  .location .inner-location > .map-area {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .location .inner-location > .info-area {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
 }
 
 @media (max-width: 576px) {
   .info-area {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    grid-template-areas:
+        grid-template-areas:
       "hours "
       "access"
       "holiday"
       "seats"
       "address";
+  }
+  .hours {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .access {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .holiday {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .seats {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .address {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
   }
 }
 
@@ -498,4 +649,4 @@ footer
 .footer .copyright {
   text-align: center;
   padding-top: 5em;
-}
+}Ï
