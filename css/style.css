@@ -100,6 +100,10 @@ a {
   padding: 0.7em;
   color: #fff;
 }
+.nav li a: hover{
+  background-color: grey;
+}
+  
 
 @media (max-width: 992px) {
   .header {
